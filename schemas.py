@@ -1,8 +1,7 @@
 from pydantic import BaseModel, Field
 
 class Student(BaseModel):
-    first_name: str = Field(min_length=1)
-    last_name: str = Field(min_length=1)
+    name: str = Field(min_length=1)
     password: str = Field(min_length=5)
     Age:int = Field()
     Gender: str = Field(min_length=1)
@@ -14,7 +13,7 @@ class Student(BaseModel):
     Country: str = Field(min_length=1)
     Phone: int = Field()
     email: str = Field(min_length=1)
-    DOB : str = Field(min_length=1)
+
 
 class FoodConsumption(BaseModel):
     student_phone: int = Field()
